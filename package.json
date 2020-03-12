@@ -69,7 +69,7 @@
     "glob": "~7.1.1",
     "inquirer": "~3.3.0",
     "json-stringify-safe": "~5.0.1",
-    "mkdirp": "~0.5.1",
+    "mkdirp": "~1.0.0",
     "npm-install-package": "~2.1.0",
     "optimist": "~0.6.1",
     "q": "~1.5.0",
