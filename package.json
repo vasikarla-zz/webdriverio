@@ -55,8 +55,9 @@
     "test:unit": "mocha test/setup-unit.js test/spec/unit/*.js",
     "test:wdio": "mocha test/setup-unit.js test/spec/wdio/*.js",
     "postversion": "run-s build",
-    "prepare": "npm prune",
-    "watch": "npm run compile:lib -- --watch"
+    "prepare": "npm run snyk-protect && npm prune",
+    "watch": "npm run compile:lib -- --watch",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "archiver": "~2.1.0",
@@ -79,7 +80,8 @@
     "supports-color": "~5.0.0",
     "url": "~0.11.0",
     "wdio-dot-reporter": "~0.0.8",
-    "wgxpath": "~1.0.0"
+    "wgxpath": "~1.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -117,7 +119,6 @@
     "sauce-connect-launcher": "^1.2.1",
     "saucelabs": "^1.4.0",
     "sinon": "^4.0.0",
-    "snyk": "^1.28.0",
     "wdio-mocha-framework": "^0.5.9"
   },
   "tags": [
@@ -147,5 +148,6 @@
     "assert",
     "cucumber",
     "testingbot"
-  ]
+  ],
+  "snyk": true
 }
