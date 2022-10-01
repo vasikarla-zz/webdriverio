@@ -55,8 +55,9 @@
     "test:unit": "mocha test/setup-unit.js test/spec/unit/*.js",
     "test:wdio": "mocha test/setup-unit.js test/spec/wdio/*.js",
     "postversion": "run-s build",
-    "prepare": "npm prune",
-    "watch": "npm run compile:lib -- --watch"
+    "prepare": "npm run snyk-protect && npm prune",
+    "watch": "npm run compile:lib -- --watch",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "archiver": "~2.1.0",
@@ -64,22 +65,23 @@
     "css-parse": "~2.0.0",
     "css-value": "~0.0.1",
     "deepmerge": "~2.0.1",
-    "ejs": "~2.5.6",
+    "ejs": "~3.1.7",
     "gaze": "~1.1.2",
     "glob": "~7.1.1",
     "inquirer": "~3.3.0",
     "json-stringify-safe": "~5.0.1",
-    "mkdirp": "~0.5.1",
+    "mkdirp": "~0.5.2",
     "npm-install-package": "~2.1.0",
     "optimist": "~0.6.1",
     "q": "~1.5.0",
-    "request": "~2.83.0",
-    "rgb2hex": "~0.1.0",
+    "request": "~2.88.0",
+    "rgb2hex": "~0.1.6",
     "safe-buffer": "~5.1.1",
     "supports-color": "~5.0.0",
     "url": "~0.11.0",
     "wdio-dot-reporter": "~0.0.8",
-    "wgxpath": "~1.0.0"
+    "wgxpath": "~1.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -117,7 +119,6 @@
     "sauce-connect-launcher": "^1.2.1",
     "saucelabs": "^1.4.0",
     "sinon": "^4.0.0",
-    "snyk": "^1.28.0",
     "wdio-mocha-framework": "^0.5.9"
   },
   "tags": [
@@ -147,5 +148,6 @@
     "assert",
     "cucumber",
     "testingbot"
-  ]
+  ],
+  "snyk": true
 }
