@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - request > extend:
+        patched: '2022-10-07T20:53:15.443Z'
+  SNYK-JS-LODASH-567746:
+    - archiver > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - inquirer > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - archiver > archiver-utils > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - archiver > async > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - archiver > zip-stream > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - gaze > globule > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+    - archiver > zip-stream > archiver-utils > lodash:
+        patched: '2022-10-07T20:53:15.443Z'
+  'npm:stringstream:20180511':
+    - request > stringstream:
+        patched: '2022-10-07T20:53:15.443Z'
